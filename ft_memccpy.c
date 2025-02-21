@@ -17,6 +17,9 @@ void	*ft_memccpy(char *dest, char *src, int ch, int size)
 	int	i;
 
 	i = 0;
+	dest = (char *)malloc(sizeof(char) * (size + 1));
+	if (dest == NULL)
+		return (0);
 	while (i < size && src[i] != ch)
 	{
 		dest[i] = src[i];
