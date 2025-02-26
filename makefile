@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME        = libft.a
+NAME		= libft.a
 CC            = cc
 CFLAGS        = -Wall -Wextra -Werror
 SRCS        = $(shell find . -type f -name '*.c' ! -name '*_bonus.c')
@@ -55,4 +55,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all bonus clean fclean re
-
