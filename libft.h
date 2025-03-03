@@ -6,7 +6,7 @@
 /*   By: molapoug <molapoug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 15:13:35 by molapoug          #+#    #+#             */
-/*   Updated: 2025/02/18 11:02:51 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/03/03 11:42:29 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,6 @@ void	ft_putendl_fd(char const *s, int fd);
 void	*ft_memcpy(char *dest, char *src, int size);
 void	*ft_memccpy(char *dest, char *src, int ch, int size);
 void	*ft_memmove(char *dest, char *src, int size);
+void	*ft_memset(void *str, int ch, size_t n);
 
 #endif

@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: molapoug <molapoug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/03 11:42:54 by molapoug          #+#    #+#             */
-/*   Updated: 2025/03/03 11:43:24 by molapoug         ###   ########.fr       */
+/*   Created: 2025/03/03 11:08:09 by molapoug          #+#    #+#             */
+/*   Updated: 2025/03/03 11:44:22 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(void)
+void	*ft_memset(void *str, int ch, size_t n)
 {
-	ft_putstr("test de ma sting\n");
+	unsigned char	*src;
+
+	src = (unsigned char *)src;
+	while (n > 0)
+	{
+		*src = (unsigned char)ch;
+		src++;
+		n--;
+	}
+	return (str);
 }
