@@ -6,21 +6,19 @@
 /*   By: molapoug <molapoug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:15:22 by molapoug          #+#    #+#             */
-/*   Updated: 2025/02/14 15:41:37 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/03/07 16:29:56 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(char *dest, char *src, int size)
+void	*ft_memcpy(void *dest, const void *src, size_t size)
 {
-	int	i;
+	char		*d;
+	const char	*s = src;
 
-	i = size;
-	while (i < size)
-	{
-		dest[i] = src[i];
-		i++;
-	}
+	d = dest;
+	while (size--)
+		*d++ = *s++;
 	return (dest);
 }

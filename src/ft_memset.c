@@ -6,7 +6,7 @@
 /*   By: molapoug <molapoug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 11:08:09 by molapoug          #+#    #+#             */
-/*   Updated: 2025/03/07 14:40:08 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/03/07 15:37:24 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memset(void *str, int ch, size_t n)
 {
 	unsigned char	*src;
 
-	//src = (unsigned char *)src;
+	src = (unsigned char *)str;
 	while (n > 0)
 	{
 		*src = (unsigned char)ch;

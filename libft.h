@@ -6,7 +6,7 @@
 /*   By: molapoug <molapoug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 15:13:35 by molapoug          #+#    #+#             */
-/*   Updated: 2025/03/07 16:01:55 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/03/07 16:01:40 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 /* include des libs nécessaires à la libft */
 # include <unistd.h>
 # include <stdlib.h>
+# include <stddef.h>
 
 /* lib a supprimer plus tard */
 # include <stdio.h>
