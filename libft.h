@@ -23,7 +23,7 @@
 # include <string.h>
 
 /* fonctions prototypés avec des int */
-int		ft_strlen(char *str);
+int		ft_strlen(const char *str);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *str);
@@ -57,5 +57,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t size);
 void	*ft_memccpy(char *dest, char *src, int ch, int size);
 void	*ft_memmove(void *dest, const void *src, size_t size);
 void	*ft_memset(void *str, int ch, size_t n);
+void	ft_bzero(void *s, size_t n);
+
+
+/*fonctions prototypés avec size_t*/
+size_t  ft_strlcpy(char *dst, const char *src, size_t size);
 
 #endif
