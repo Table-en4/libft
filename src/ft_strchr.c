@@ -6,13 +6,13 @@
 /*   By: molapoug <mohapouge@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:45:34 by molapoug          #+#    #+#             */
-/*   Updated: 2025/04/02 14:45:36 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/04/02 16:43:48 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
 	int				i;
 	unsigned char	ch;

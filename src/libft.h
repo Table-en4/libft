@@ -6,7 +6,7 @@
 /*   By: molapoug <molapoug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 15:13:35 by molapoug          #+#    #+#             */
-/*   Updated: 2025/04/02 13:38:34 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/04/02 16:42:49 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_strdup(const char *s);
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_strncpy(char *dest, char *src, int n);
 char	*ft_strncat(char *dest, char *src, int n);
-char    *ft_strchr(const char *str, int c);
+char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *s, int c);
 
 /* fonctions prototypés avec des void */
@@ -62,7 +62,7 @@ void	*ft_memmove(void *dest, const void *src, size_t size);
 void	*ft_memset(void *str, int ch, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	ft_putnbr_fd(int nbr, int fd);
-void    *ft_memchr(const void *arr, int c, size_t n);
+void	*ft_memchr(const void *arr, int c, size_t n);
 
 /*fonctions prototypés avec size_t*/
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
