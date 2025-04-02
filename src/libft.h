@@ -6,7 +6,7 @@
 /*   By: molapoug <molapoug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 15:13:35 by molapoug          #+#    #+#             */
-/*   Updated: 2025/03/31 23:07:24 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/04/02 13:38:34 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ char	*ft_strncat(char *dest, char *src, int n);
 /* fonctions prototypés avec des void */
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
+void	ft_putstr_fd(const char *s, int fd);
 void	ft_putendl(const char *s);
 void	ft_putnbr(int n);
 void	ft_putchar_fd(char c, int fd);
@@ -57,8 +58,11 @@ void	*ft_memccpy(char *dest, char *src, int ch, int size);
 void	*ft_memmove(void *dest, const void *src, size_t size);
 void	*ft_memset(void *str, int ch, size_t n);
 void	ft_bzero(void *s, size_t n);
+void	ft_putnbr_fd(int nbr, int fd);
+void    *ft_memchr(const void *arr, int c, size_t n);
 
 /*fonctions prototypés avec size_t*/
-size_t  ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 #endif
