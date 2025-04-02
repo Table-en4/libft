@@ -36,6 +36,7 @@ int		ft_toupper(int c);
 int		ft_islower_alpha(int c);
 int		ft_isupper_alpha(int c);
 int		ft_tolower(int c);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 /* fonctions prototypés avec des char */
 char	*ft_strcat(char *dest, char *src);
@@ -45,6 +46,8 @@ char	*ft_strdup(const char *s);
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_strncpy(char *dest, char *src, int n);
 char	*ft_strncat(char *dest, char *src, int n);
+char    *ft_strchr(const char *str, int c);
+char	*ft_strrchr(const char *s, int c);
 
 /* fonctions prototypés avec des void */
 void	ft_putchar(char c);
