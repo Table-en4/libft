@@ -47,6 +47,7 @@ char	*ft_strncpy(char *dest, char *src, int n);
 char	*ft_strncat(char *dest, char *src, int n);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *s, int c);
+char    *ft_substr(char const *s, unsigned int start, size_t len);
 
 /* fonctions prototypés avec des void */
 void	ft_putchar(char c);
