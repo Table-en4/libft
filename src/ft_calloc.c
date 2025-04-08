@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: molapoug <mohapouge@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/05 13:09:14 by molapoug          #+#    #+#             */
-/*   Updated: 2025/04/08 12:47:31 by molapoug         ###   ########.fr       */
+/*   Created: 2025/04/08 11:20:55 by molapoug          #+#    #+#             */
+/*   Updated: 2025/04/08 12:49:43 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	*ft_calloc(size_t elementCount, size_t elementSize)
 {
-	char	*substr;
-	size_t	sub_len;
-	size_t	slen;
-	size_t	i;
+	void	*ptr;
 
-	slen = ft_strlen(s);
-	if (start > slen)
-		start = slen;
-	sub_len = slen - start;
-	if (sub_len > len)
-		sub_len = len;
-	substr = malloc(sizeof(char) * (sub_len + 1));
-	if (!substr)
+	if (elementCount == 0 || elementSize == 0)
+		return (malloc(0));
+	ptr = malloc(elementCount * elementSize);
+	if (ptr == NULL)
 		return (NULL);
-	i = 0;
-	while (i < sub_len && s[i + start])
-	{
-		substr[i] = s[i + start];
-		i++;
-	}
-	substr[i] = '\0';
-	return (substr);
+	ft_memset((unsigned char *)ptr, 0, elementCount * elementSize);
+	return (ptr);
 }

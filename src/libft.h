@@ -6,7 +6,7 @@
 /*   By: molapoug <molapoug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 15:13:35 by molapoug          #+#    #+#             */
-/*   Updated: 2025/04/02 16:42:49 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/04/08 12:47:53 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,9 @@ char	*ft_strncpy(char *dest, char *src, int n);
 char	*ft_strncat(char *dest, char *src, int n);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *s, int c);
-char    *ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 
 /* fonctions prototypés avec des void */
 void	ft_putchar(char c);
@@ -64,6 +66,7 @@ void	*ft_memset(void *str, int ch, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	ft_putnbr_fd(int nbr, int fd);
 void	*ft_memchr(const void *arr, int c, size_t n);
+void	*ft_calloc(size_t elementCount, size_t elementSize);
 
 /*fonctions prototypés avec size_t*/
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
