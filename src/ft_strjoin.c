@@ -6,7 +6,7 @@
 /*   By: molapoug <mohapouge@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 11:31:45 by molapoug          #+#    #+#             */
-/*   Updated: 2025/04/08 12:44:42 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/04/09 11:44:15 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
+	unsigned int	j;
+	int				i;
 	char			*str;
-	unsigned int		j;
-	int			i;
 
 	if (!s1 && !s2)
 		return (NULL);
