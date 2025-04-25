@@ -6,65 +6,76 @@
 /*   By: molapoug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 19:06:36 by molapoug          #+#    #+#             */
-/*   Updated: 2025/04/24 19:53:47 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/04/25 19:28:38 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_strlen(char *str)
+int	count_word(char const *str, char c)
 {
 	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-int	count_word(char *str, char c)
-{
-	int	i;
-	int	j;
+	int	count;
 	int	trigger;
 
-	i = 0;
-	j = 0;
+       	i = 0;
+	count = 0;
 	trigger = 0;
-	while (str[j])
+	while (str[i])
 	{
-		if (str[j] != c && trigger == 0)
+		if (str[i] != c && trigger == 0)
 		{
 			trigger = 1;
-			i++;
+			count++;
 		}
 		else if (str[i] == c)
 			trigger = 0;
 		i++;
 	}
-	return (i);
+	return (count);
 }
 
-int	word_dup(char *str)
+char	*word_dup(char const *str, int start, int end)
 {
+	char	*word;
 	int	i;
-	char	*dst;
 
+	word = malloc(sizeof(char) * (end - start + 1));
+	if (!word)
+		return (NULL);
 	i = 0;
-	if (str == 0)
-		return (0);
-	dst = malloc(sizeof *dst *(ft_strlen(str) + 1));
-	while (str[i])
-	{
-		dst[i] = str[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (*dst);
+	while (start < end)
+		word[i++] = str[start++];
+	word[i] = '\0';
+	return (word);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	return (0);
-}
+	char	**result;
+	int	i;
+	int	j;
+	int	start;
 
+	if (!s)
+		return (NULL);
+	result = malloc(sizeof(char *) * (count_word(s, c) + 1));
+	if (!result)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		if (s[i] != c)
+		{
+			start = i;
+			while (s[i] && s[i] != c)
+				i++;
+			result[j++] = word_dup(s, start, i);
+		}
+		else
+			i++;
+	}
+	result[j] = NULL;
+	return (result);
+}
