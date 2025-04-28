@@ -6,7 +6,7 @@
 /*   By: molapoug <molapoug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 15:13:35 by molapoug          #+#    #+#             */
-/*   Updated: 2025/04/25 16:22:39 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/04/28 18:42:56 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,16 @@
 # include <stdio.h>
 # include <string.h>
 
+/* strcutre */
+typedef struct  s_list
+{
+  void  *content;
+  struct s_list *next;
+}   t_list;
+
+/* ################################# */
 /* fonctions prototypés avec des int */
+/* ################################# */
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *str);
@@ -67,10 +76,14 @@ void	ft_bzero(void *s, size_t n);
 void	ft_putnbr_fd(int nbr, int fd);
 void	*ft_memchr(const void *arr, int c, size_t n);
 void	*ft_calloc(size_t elementCount, size_t elementSize);
+void    ft_lstadd_front(t_list **lst, t_list *new);
 
 /*fonctions prototypés avec size_t*/
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
+
+/* fonctions prototypes avec t_size */
+t_list  *ft_lstnew(void *content);
 
 #endif

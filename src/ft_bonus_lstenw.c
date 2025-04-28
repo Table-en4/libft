@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_bonus_lstenw.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: molapoug <molapoug@student.42.fr>          +#+  +:+       +#+        */
+/*   By: molapoug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/16 10:30:05 by molapoug          #+#    #+#             */
-/*   Updated: 2025/04/28 15:21:17 by molapoug         ###   ########.fr       */
+/*   Created: 2025/04/28 10:30:47 by molapoug          #+#    #+#             */
+/*   Updated: 2025/04/28 15:14:48 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-  #include "libft.h"
+#include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+t_list  *ft_lstnew(void *content)
 {
-	char		*d;
-	const char	*s = src;
+  t_list  *dst;
 
-	d = dest;
-	if (d < s)
-	{
-		while (n--)
-			*d++ = *s++;
-	}
-	else
-	{
-		d += n;
-		s += n;
-		while (n--)
-			*--d = *--s;
-	}
-	return (dest);
+  dst = malloc(sizeof(t_list));
+  if (dst == NULL)
+    return (NULL);
+  dst->content = content;
+  dst->next = NULL;
+  return (dst);
 }

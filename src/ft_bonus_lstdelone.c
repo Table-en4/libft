@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_bonus_lstdelone.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: molapoug <molapoug@student.42.fr>          +#+  +:+       +#+        */
+/*   By: molapoug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/16 10:30:05 by molapoug          #+#    #+#             */
-/*   Updated: 2025/04/28 15:21:17 by molapoug         ###   ########.fr       */
+/*   Created: 2025/04/28 17:03:03 by molapoug          #+#    #+#             */
+/*   Updated: 2025/04/28 18:28:39 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-  #include "libft.h"
+#include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void    ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	char		*d;
-	const char	*s = src;
-
-	d = dest;
-	if (d < s)
-	{
-		while (n--)
-			*d++ = *s++;
-	}
-	else
-	{
-		d += n;
-		s += n;
-		while (n--)
-			*--d = *--s;
-	}
-	return (dest);
+     if (!lst || !del)
+        return ;
+    del(lst->content);
+    free(lst);
 }
+
+

@@ -6,7 +6,7 @@
 /*   By: molapoug <molapoug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 15:13:35 by molapoug          #+#    #+#             */
-/*   Updated: 2025/04/25 16:22:26 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/04/28 12:59:18 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@
 /* lib a supprimer plus tard */
 # include <stdio.h>
 # include <string.h>
+
+/* structure bonus */
+typedef struct  s_list
+{
+  void  *content;
+  struct  s_list  *next;
+}   t_list;
 
 /* fonctions prototypés avec des int */
 int		ft_strcmp(const char *s1, const char *s2);
