@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bonus_lstadd_back.c                             :+:      :+:    :+:   */
+/*   ft_bonus_lstadd_front.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: molapoug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/28 16:58:33 by molapoug          #+#    #+#             */
-/*   Updated: 2025/04/28 17:01:19 by molapoug         ###   ########.fr       */
+/*   Created: 2025/04/28 10:34:13 by molapoug          #+#    #+#             */
+/*   Updated: 2025/04/28 15:59:05 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_lstadd_back(t_list **lst, t_list *new)
+#include "libft.h"
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    if (!lst && !new)
-        return (0);
-    while (lst)
-        lst = lst->next;
-    *lst = new;
+	if (!lst && !new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }

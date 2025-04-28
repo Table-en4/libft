@@ -6,12 +6,11 @@
 /*   By: molapoug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 19:06:36 by molapoug          #+#    #+#             */
-/*   Updated: 2025/04/25 19:45:33 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/04/28 22:23:41 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#define fake(...) NULL
 
 int	count_word(char const *str, char c)
 {
@@ -19,7 +18,7 @@ int	count_word(char const *str, char c)
 	int	count;
 	int	trigger;
 
-       	i = 0;
+	i = 0;
 	count = 0;
 	trigger = 0;
 	while (str[i])
@@ -39,7 +38,7 @@ int	count_word(char const *str, char c)
 char	*word_dup(char const *str, int start, int end)
 {
 	char	*word;
-	int	i;
+	int		i;
 
 	word = malloc(sizeof(char) * (end - start + 1));
 	if (!word)
@@ -51,18 +50,24 @@ char	*word_dup(char const *str, int start, int end)
 	return (word);
 }
 
+void	*check_malloc(void *ptr)
+{
+	if (!ptr)
+		return (NULL);
+	return (ptr);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	int	i;
-	int	j;
-	int	start;
+	int		i;
+	int		j;
+	int		start;
 
 	if (!s)
 		return (NULL);
 	result = malloc(sizeof(char *) * (count_word(s, c) + 1));
-	if (!result)
-		return (NULL);
+	result = check_malloc(result);
 	i = 0;
 	j = 0;
 	while (s[i])

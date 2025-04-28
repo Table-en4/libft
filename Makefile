@@ -6,35 +6,39 @@
 #    By: molapoug <molapoug@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/18 10:59:29 by molapoug          #+#    #+#              #
-#    Updated: 2025/04/25 16:37:56 by molapoug         ###   ########.fr        #
+#    Updated: 2025/04/28 22:48:02 by molapoug         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f
+
 SRC_DIR = src
-SRC = $(wildcard $(SRC_DIR)/*.c)
+SRC = $(filter-out src/ft_lstadd_bonus.c, $(wildcard $(SRC_DIR)/*.c))
 OBJ = $(SRC:.c=.o)
+
+BONUS_SRC = $(SRC_DIR)/ft_lstadd_front_bonus.c $(SRC_DIR)/ft_lstdelone_bonus.c
+BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@echo "Building $(NAME)"
 	@$(AR) $(NAME) $(OBJ)
 
-$(SRC_DIR)/%.o: $(SRC_DIR)/%.c libft.h
-	@echo "Compiling $<"
+bonus: OBJ += $(BONUS_OBJ)
+bonus: fclean $(NAME)
+
+$(SRC_DIR)/%.o: $(SRC_DIR)/%.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@echo "Cleaning object files"
-	@$(RM) $(OBJ)
+	$(RM) $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
-	@echo "Cleaning $(NAME)"
-	@$(RM) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
+
