@@ -6,11 +6,12 @@
 /*   By: molapoug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 19:06:36 by molapoug          #+#    #+#             */
-/*   Updated: 2025/04/25 19:28:38 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/04/25 19:45:33 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#define fake(...) NULL
 
 int	count_word(char const *str, char c)
 {
