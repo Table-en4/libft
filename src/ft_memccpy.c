@@ -12,20 +12,20 @@
 
 #include "libft.h"
 
-void	*ft_memccpy(char *dest, char *src, int ch, int size)
+void	*ft_memccpy(char *dest, char *src, int c, int n)
 {
 	int	i;
 
 	i = 0;
-	dest = (char *)malloc(sizeof(char) * (size + 1));
+	dest = (char *)malloc(sizeof(char) * (n + 1));
 	if (dest == NULL)
 		return (0);
-	while (i < size && src[i] != ch)
+	while (i < n && src[i] != c)
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	if (i < size && src[i] == ch)
+	if (i < n && src[i] == c)
 	{
 		dest[i] = src[i];
 		return (dest + i + 1);

@@ -6,7 +6,7 @@
 /*   By: molapoug <molapoug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 15:13:35 by molapoug          #+#    #+#             */
-/*   Updated: 2025/04/28 22:29:24 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/04/29 19:52:29 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,16 +68,18 @@ void				ft_putendl(const char *s);
 void				ft_putnbr(int n);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putendl_fd(char const *s, int fd);
-void				*ft_memcpy(void *dest, const void *src, size_t size);
-void				*ft_memccpy(char *dest, char *src, int ch, int size);
+void				*ft_memcpy(void *dest, const void *src, size_t n);
+void				*ft_memccpy(char *dest, char *src, int c, int n);
 void				*ft_memmove(void *dest, const void *src, size_t size);
-void				*ft_memset(void *str, int ch, size_t n);
+void				*ft_memset(void *s, int ch, size_t n);
 void				ft_bzero(void *s, size_t n);
 void				ft_putnbr_fd(int nbr, int fd);
 void				*ft_memchr(const void *arr, int c, size_t n);
-void				*ft_calloc(size_t elementCount, size_t elementSize);
+void				*ft_calloc(size_t nmemb, size_t size);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(void*));
+void                ft_striteri(char *s, void (*f)(unsigned int, char*));
+void                ft_lstiter(t_list *lst, void (*f)(void *));
 
 /*fonctions prototypés avec size_t*/
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);

@@ -6,7 +6,7 @@
 /*   By: molapoug <molapoug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 18:42:50 by molapoug          #+#    #+#             */
-/*   Updated: 2025/03/07 15:29:15 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/04/29 11:09:06 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strdup(const char *s)
 	while (s[len])
 		len++;
 	dest = (char *)malloc(sizeof(char) * len + 1);
+	if (!dest)
+		return (NULL);
 	while (i < len)
 	{
 		dest[i] = s[i];
