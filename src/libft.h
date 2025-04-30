@@ -6,7 +6,7 @@
 /*   By: molapoug <molapoug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 15:13:35 by molapoug          #+#    #+#             */
-/*   Updated: 2025/04/29 19:52:29 by molapoug         ###   ########.fr       */
+/*   Updated: 2025/04/30 08:53:57 by molapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char				*ft_itoa(int n);
 
 /* fonctions prototypés avec des void */
 void				ft_putchar(char c);
@@ -77,9 +79,9 @@ void				ft_putnbr_fd(int nbr, int fd);
 void				*ft_memchr(const void *arr, int c, size_t n);
 void				*ft_calloc(size_t nmemb, size_t size);
 void				ft_lstadd_front(t_list **lst, t_list *new);
-void				ft_lstdelone(t_list *lst, void (*del)(void*));
-void                ft_striteri(char *s, void (*f)(unsigned int, char*));
-void                ft_lstiter(t_list *lst, void (*f)(void *));
+void				ft_lstdelone(t_list *lst, void (*del)(void *));
+void				ft_striteri(char *s, void (*f)(unsigned int, char *));
+void				ft_lstiter(t_list *lst, void (*f)(void *));
 
 /*fonctions prototypés avec size_t*/
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
